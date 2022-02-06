@@ -1,42 +1,51 @@
-# Teste de seleção para vaga de Java
+# Frete - SigaBem
+Teste de seleção para vaga de Java
+<br/><br/>
 
-## Faça um fork desse projeto e siga as instruções a seguir utilizando esse projeto.
+## **Tecnologias utilizadas:**
+- Spring Boot (2.6.3)
+- Java 11
+- WebClient
+- Maven
+- JPA
+- Hibernate
+- Lombok
+- Model Mapper
+- Swagger
 
-# Pré-requisitos
+---
 
-Implementar apenas a API (Backend)
-Versão Java +8 (caso seja Java 8, verificar compatibilidade da sua IDE)
-Versão Spring Boot >= 2.4
-Banco de dados fica a seu critério (Sql, NoSql)
-Seu projeto deve obrigatoriamente ter as anotações: @Repository, @Entity e @Controller
-Documentação mínima da API (Swagger ou documento PDF)
+## **Como Acessar?**
 
-# Objetivo
-Implementar para empresa de transporte de cargas SigaBem o endpoint para o cálculo do preço do frete:
+- Link:
+   - http://localhost:8080/frete
 
-Você deve calcular o valor total do frete e a data prevista da entrega.
+##
 
-Considerar regras para calcular o valor do frete:
- * CEPs com DDDs iguais tem 50% de desconto no valor do frete e entrega prevista de 1 dia
- * CEPs de estados iguais tem 75% de desconto no valor do frete e entrega prevista de 3 dias
- * CEPs de estados diferentes não deve ser aplicado o desconto no valor do frete e entrega prevista de 10 dias
- * O valor do frete é cobrado pelo peso da encomenda, o valor para cada KG é R$1,00
+- Swagger: 
+   - http://localhost:8080/swagger-ui/index.html
+    
+---
 
-Seu input de entrada deve ser “peso”, “cepOrigem”, “cepDestino” e “nomeDestinatario“
+## **Exemplo de inserção (POST):**
 
-Você utilizará a API gratuita de consulta de CEP abaixo: 
-Documentação da API: https://viacep.com.br/
-Exemplo do GET: https://viacep.com.br/ws/<CEP_A_CONSULTAR>/json/
+```json
+{
+    "peso": 12.00,
+    "cepOrigem": "88020231",
+    "cepDestino": "89010000",
+    "nomeDestinatario": "Nome"
+}
+```
 
-Endpoint pode ser público
-Response/Output deve possuir: “vlTotalFrete” e “dataPrevistaEntrega”, “cepOrigem” e “cepDestino”
-Deve ser persistido no banco os valores da cotação os valores consultados: “peso”, “cepOrigem”, “cepDestino”, “nomeDestinatario”, “vlTotalFrete”, “dataPrevistaEntrega” e “dataConsulta”
+---
 
+_Camadas de Repositório, Service, DTO e Controller_
 
+_Banco H2_
 
-# Critérios de avaliação:
- * Implementação das regras de negócios para o cálculo do frete
- * Boas práticas de programação, arquitetura  e padrões de projetos
+_Tratamento personalizado de exceções_
 
-# Entrega: 
- * Disponibilizar um link do repositório no GitHub e encaminhar para developer@cd2.com.br
+_Validações dos campos e mensagens retornadas_
+
+---

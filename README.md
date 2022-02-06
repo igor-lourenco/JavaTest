@@ -8,6 +8,8 @@ Teste de seleção para vaga de Java
 - WebClient
 - Maven
 - JPA
+- JUnit
+- Mockito
 - Hibernate
 - Lombok
 - Model Mapper
@@ -37,10 +39,12 @@ Teste de seleção para vaga de Java
     "nomeDestinatario": "Nome"
 }
 ```
+## Padrão camadas
+![Padrao_Camadas](https://github.com/igor-lourenco/projeto-spring-react-vendas/blob/main/frontend/src/assets/img/padrao_camadas.png)
 
 ---
 
-_Camadas de Repositório, Service, DTO e Controller_
+_Testes unitários das camadas de Repositório, Service, DTO e Controller_
 
 _Banco H2_
 
@@ -49,3 +53,5 @@ _Tratamento personalizado de exceções_
 _Validações dos campos e mensagens retornadas_
 
 ---
+
+
